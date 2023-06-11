@@ -1,0 +1,11 @@
+---
+- name: 'Add the gitlab repository'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: 'johanneskastl.add_zypper_repository'
+      repository_name: 'gitlab_gitlab-ee'
+      repository_baseurl: "https://packages.gitlab.com/gitlab/gitlab-ee/opensuse/{{ ansible_distribution_version }}/$basearch"
+      auto_import_keys: '1'
