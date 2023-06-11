@@ -25,3 +25,6 @@
 [submodule "ansible/roles/b1-systems-ansible-role-suseconnect"]
 	path = ansible/roles/b1-systems-ansible-role-suseconnect
 	url = https://github.com/b1-systems/ansible-role-suseconnect.git
+[submodule "ansible/roles/alvistack.gitlab_ce"]
+	path = ansible/roles/alvistack.gitlab_ce
+	url = https://github.com/alvistack/ansible-role-gitlab_ce
