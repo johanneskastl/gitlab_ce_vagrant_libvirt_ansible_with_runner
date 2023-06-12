@@ -1,0 +1,10 @@
+---
+- name: 'Install Gitlab'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: 'alvistack.gitlab_ce'
+      gitlab_package_modify_kernel_parameters: false
+
