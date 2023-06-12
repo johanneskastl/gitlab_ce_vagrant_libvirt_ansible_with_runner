@@ -21,5 +21,8 @@
 - name: 'Run playbook-all_nodes-install_hostname.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_hostname.yml
 
+- name: 'Run playbook-all_nodes-add_gitlab-ce_repository.yml'
+  ansible.builtin.import_playbook: playbook-all_nodes-add_gitlab-ce_repository.yml
+
 - name: 'Run playbook-all_nodes-alvistack.gitlab_ce.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-alvistack.gitlab_ce.yml
