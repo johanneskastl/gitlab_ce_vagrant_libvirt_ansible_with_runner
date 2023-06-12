@@ -1,0 +1,14 @@
+---
+- name: 'Add the gitlab repository'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  tasks:
+    - name: 'Create /etc/zypp/repos.d/gitlab-ce.repo'
+      ansible.builtin.template:
+        src: 'gitlab-ce.repo.j2'
+        dest: '/etc/zypp/repos.d/gitlab-ce.repo'
+        owner: 'root'
+        group: 'root'
+        mode: '0644'
