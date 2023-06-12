@@ -14,3 +14,6 @@
 
 - name: 'Run playbook-all_nodes-install_git.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_git.yml
+
+- name: 'Run playbook-all_nodes-alvistack.gitlab_ce.yml'
+  ansible.builtin.import_playbook: playbook-all_nodes-alvistack.gitlab_ce.yml
