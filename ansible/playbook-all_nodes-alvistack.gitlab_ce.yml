@@ -6,6 +6,6 @@
 
   roles:
     - role: 'alvistack.gitlab_ce'
-      gitlab_package_modify_kernel_parameters: false
+      gitlab_package_modify_kernel_parameters: 'false'
       gitlab_release: '16.0'
 
