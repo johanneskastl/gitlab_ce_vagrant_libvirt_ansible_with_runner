@@ -1,0 +1,20 @@
+---
+- name: 'Copy gitlab RPM'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  tasks:
+
+    - name: Create folder /var/cache/zypp/packages/gitlab-ce/
+      ansible.builtin.file:
+        path: '/var/cache/zypp/packages/gitlab-ce/'
+        state: 'directory'
+        owner: 'root'
+        group: 'root'
+        mode: '0755'
+
+    - name: 'Copy gitlab RPM'
+      ansible.builtin.copy:
+        src: files/gitlab-ce-16.0.4-ce.0.sles15.x86_64.rpm
+        dest: /var/cache/zypp/packages/gitlab-ce/gitlab-ce-16.0.4-ce.0.sles15.x86_64.rpm
