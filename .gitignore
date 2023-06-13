@@ -12,3 +12,6 @@ ansible/ansible.cfg
 
 # put license key in this file, which is not tracked by git
 ansible/group_vars/all/SUSE_LICENSE_KEY.yml
+
+# big file downloaded for testing with bad internet connection
+ansible/files/gitlab-ce-*-ce.0.sles15.x86_64.rpm
