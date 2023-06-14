@@ -16,5 +16,7 @@
 
     - name: 'Copy gitlab RPM'
       ansible.builtin.copy:
-        src: "{{ lookup('ansible.builtin.fileglob', '*.rpm') }}"
+        src: "{{ item }}"
         dest: "/var/cache/zypp/packages/gitlab-ce/"
+      with_fileglob:
+        - '*.rpm'
