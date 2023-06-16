@@ -1,0 +1,48 @@
+# gitlab_ce_vagrant_libvirt_ansible
+
+This Vagrant setup creates a VM and installs [Gitlab CE (Community
+Edition](https://netbox.dev/).
+
+It uses the [gitlab-ce role by
+alvistack](https://github.com/alvistack/ansible-role-gitlab_ce). Kudos to Wong
+Hoi Sing Edison for creating the role!
+
+Default OS is openSUSE Leap 15.4. Although that can be changed in the
+Vagrantfile, please beware that this will break the Ansible provisioning.
+
+## Vagrant
+
+1. You need vagrant obviously. And ansible. And git...
+1. Fetch the box, per default this is `opensuse/Leap-15.4.x86_64`, using
+   `vagrant box add opensuse/Leap-15.4.x86_64`.
+1. Make sure the git submodules are fully working by issuing `git submodule init
+   && git submodule update`
+1. Run `vagrant up`
+1. Fetch the Gitlab root password by logging into the VM (`vagrant ssh`) and
+   reading `/etc/gitlab/initial_root_password`.
+1. Find out the VM's IP (e.g. `vagrant address gitlab-ce`, if you have vagrant
+   address installed) and connect to http://IP:80.
+1. Log in as `root` user using the password from the
+   `/etc/gitlab/initial_root_password` file.
+1. Party!
+
+## Disabling the Ansible provisioning
+
+In case you do not want Ansible to install teleport (because you want to install
+it yourself), just comment out the following lines in the `Vagrantfile`:
+
+```hcl
+    node.vm.provision "ansible" do |ansible|
+      ansible.playbook = "ansible/playbook-all_nodes.yml"
+    end # node.vm.provision
+```
+
+You also find all of the playbooks in the `ansible` folder.
+
+## License
+
+Apache 2.0
+
+## Author Information
+
+I am Johannes Kastl, reachable via kastl@b1-systems.de.
