@@ -27,7 +27,7 @@
 	url = https://github.com/b1-systems/ansible-role-suseconnect.git
 [submodule "ansible/roles/alvistack.gitlab_ce"]
 	path = ansible/roles/alvistack.gitlab_ce
-	url = https://github.com/alvistack/ansible-role-gitlab_ce
+	url = https://github.com/johanneskastl/alvistack--ansible-role-gitlab_ce.git
 [submodule "ansible/roles/johanneskastl.set_hostname"]
 	path = ansible/roles/johanneskastl.set_hostname
 	url = https://github.com/johanneskastl/ansible-role-set_hostname.git
