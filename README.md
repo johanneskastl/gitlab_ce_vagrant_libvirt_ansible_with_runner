@@ -26,6 +26,29 @@ Vagrantfile, please beware that this will break the Ansible provisioning.
    `/etc/gitlab/initial_root_password` file.
 1. Party!
 
+## Avoiding downloading the big RPM each time
+
+As `vagrant destroy` completely removes the virtual machine, each `vagrant up`
+requires download the big `gitlab-ce` RPM again.
+
+In case you want to avoid that, download the RPM manually and place it inside
+the `ansible/` folder. The Ansible provisioning will pick it up and transfer it
+to the right place inside the VM, before the role tries to install it.
+
+Make sure to pick the right version that is going to be installed:
+
+`playbook-all_nodes-alvistack.gitlab_ce.yml` contains:
+
+```yaml
+gitlab_release: '16.0'
+```
+
+The role then translates this to `16.0.4` (in
+`ansible/roles/alvistack.gitlab_ce/vars/main.yml`).
+
+Hence downloading `gitlab-ce-16.0.4-ce.0.sles15.x86_64.rpm` and placing it in
+the `ansible` folder will work.
+
 ## Disabling the Ansible provisioning
 
 In case you do not want Ansible to install teleport (because you want to install
