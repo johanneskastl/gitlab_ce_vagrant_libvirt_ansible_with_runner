@@ -1,0 +1,10 @@
+---
+
+- name: install gitlab
+  ansible.builtin.yum:
+    name: "{{ gitlab_package }}"
+  environment:
+    EXTERNAL_URL: "{{ gitlab_external_url | default('https://' + inventory_hostname) }}"
+    GITLAB_ROOT_PASSWORD: "{{ admin_password }}"
+  notify:
+    - setup_api_token
