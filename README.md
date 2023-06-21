@@ -1,7 +1,7 @@
 # gitlab_ce_vagrant_libvirt_ansible
 
 This Vagrant setup creates a VM and installs [Gitlab CE (Community
-Edition](https://netbox.dev/).
+Edition)](https://netbox.dev/).
 
 It uses the [gitlab-ce role by
 alvistack](https://github.com/alvistack/ansible-role-gitlab_ce). Kudos to Wong
