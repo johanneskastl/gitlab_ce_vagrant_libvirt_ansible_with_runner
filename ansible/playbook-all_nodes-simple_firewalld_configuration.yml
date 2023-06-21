@@ -1,0 +1,13 @@
+---
+- name: 'Simple firewalld configuration'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: 'johanneskastl.simple_firewalld_configuration'
+      firewalld_ports_enabled:
+        - '80/tcp'
+        - '443/tcp'
+      firewalld_services_enabled:
+        - 'ssh'
