@@ -25,6 +25,3 @@
 
 - name: 'Run playbook-all_nodes-simple_firewalld_configuration.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-simple_firewalld_configuration.yml
-
-- name: 'Run playbook-gitlab_server-add_gitlab-ce_repository.yml'
-  ansible.builtin.import_playbook: playbook-gitlab_server-add_gitlab-ce_repository.yml
