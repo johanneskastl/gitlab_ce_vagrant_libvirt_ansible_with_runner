@@ -1,0 +1,27 @@
+---
+- name: 'Install, configure and start postfix'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  tasks:
+
+    - name: 'Install postfix'
+      ansible.builtin.package:
+        name: postfix
+        state: present
+
+    - name: 'Set inet_protocols to ipv4'
+      ansible.builtin.lineinfile:
+        path: /etc/postfix/main.cf
+        regexp: '^inet_protocols'
+        line: inet_protocols = ipv4
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: 'Start and enable postfix'
+      ansible.builtin.service:
+        name: postfix
+        state: started
+        enabled: true
