@@ -31,3 +31,6 @@
 [submodule "ansible/roles/johanneskastl.set_hostname"]
 	path = ansible/roles/johanneskastl.set_hostname
 	url = https://github.com/johanneskastl/ansible-role-set_hostname.git
+[submodule "ansible/roles/johanneskastl.simple_firewalld_configuration"]
+	path = ansible/roles/johanneskastl.simple_firewalld_configuration
+	url = https://github.com/johanneskastl/ansible-role-simple_firewalld_configuration
