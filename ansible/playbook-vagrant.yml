@@ -39,6 +39,3 @@
 
 - name: 'Run playbook-gitlab_server-add_gitlab-ce_repository.yml'
   ansible.builtin.import_playbook: playbook-gitlab_server-add_gitlab-ce_repository.yml
-
-- name: 'Run playbook-gitlab_server-alvistack.gitlab_ce.yml'
-  ansible.builtin.import_playbook: playbook-gitlab_server-alvistack.gitlab_ce.yml
