@@ -3,9 +3,13 @@
 This Vagrant setup creates a VM and installs [Gitlab CE (Community
 Edition)](https://netbox.dev/).
 
-It uses the [gitlab-ce role by
+The `main` branch uses openSUSE Leap 15.4 and the [gitlab-ce role by
 alvistack](https://github.com/alvistack/ansible-role-gitlab_ce). Kudos to Wong
 Hoi Sing Edison for creating the role!
+
+There is also a `Rocky9` branch, that uses Rocky Linux 9 and the [install_gitlab
+role](https://github.com/jjaswanson4/jdc/tree/main/roles/install_gitlab/)
+by Josh Swanson.
 
 Default OS is openSUSE Leap 15.4. Although that can be changed in the
 Vagrantfile, please beware that this will break the Ansible provisioning.
