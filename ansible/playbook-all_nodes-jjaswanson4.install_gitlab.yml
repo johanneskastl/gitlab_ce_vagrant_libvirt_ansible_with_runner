@@ -1,0 +1,10 @@
+---
+- name: 'Install Gitlab using jjaswanson4.install_gitlab'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: 'jjaswanson4.install_gitlab'
+      gitlab_external_url: "http://{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}"
+      admin_password: test123
