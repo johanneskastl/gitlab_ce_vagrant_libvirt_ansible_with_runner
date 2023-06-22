@@ -1,7 +1,8 @@
-# gitlab_ce_vagrant_libvirt_ansible
+# gitlab_ce_vagrant_libvirt_ansible_with_runner
 
 This Vagrant setup creates a VM and installs [Gitlab CE (Community
-Edition)](https://netbox.dev/).
+Edition)](https://netbox.dev/). In addition there is another VM, where the
+gitlab-runner is being installed (but not configured/registered!).
 
 The `main` branch uses openSUSE Leap 15.4 and the [gitlab-ce role by
 alvistack](https://github.com/alvistack/ansible-role-gitlab_ce). Kudos to Wong
