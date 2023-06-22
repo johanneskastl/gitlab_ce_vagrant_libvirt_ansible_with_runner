@@ -1,6 +1,6 @@
 ---
 - name: 'Fix dnf language error'
-  hosts: 'all'
+  hosts: 'gitlab-ce'
   gather_facts: true
   become: true
 
