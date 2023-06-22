@@ -24,11 +24,11 @@
 - name: 'Run playbook-all_nodes-install_hostname.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_hostname.yml
 
-- name: 'Run playbook-all_nodes-copy_gitlab_RPM.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-copy_gitlab_RPM.yml
+- name: 'Run playbook-gitlab_server-copy_gitlab_RPM.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-copy_gitlab_RPM.yml
 
-- name: 'Run playbook-all_nodes-add_gitlab-ce_repository.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-add_gitlab-ce_repository.yml
+- name: 'Run playbook-gitlab_server-add_gitlab-ce_repository.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-add_gitlab-ce_repository.yml
 
-- name: 'Run playbook-all_nodes-alvistack.gitlab_ce.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-alvistack.gitlab_ce.yml
+- name: 'Run playbook-gitlab_server-alvistack.gitlab_ce.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-alvistack.gitlab_ce.yml
