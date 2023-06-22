@@ -1,6 +1,6 @@
 ---
 - name: 'Install Gitlab using jjaswanson4.install_gitlab'
-  hosts: 'all'
+  hosts: 'gitlab-ce'
   gather_facts: true
   become: true
 
