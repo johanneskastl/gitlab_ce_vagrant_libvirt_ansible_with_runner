@@ -1,6 +1,6 @@
 ---
-- name: 'Install Gitlab'
-  hosts: 'all'
+- name: 'Instgitlab-ce Gitlab'
+  hosts: 'gitlab-ce'
   gather_facts: true
   become: true
 
