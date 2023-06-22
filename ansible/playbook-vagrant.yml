@@ -11,6 +11,8 @@
 
 - name: 'Run playbook-all_nodes-zypper_ref_accept_keys.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-zypper_ref_accept_keys.yml
+  when:
+    - ansible_os_family == 'Suse'
 
 - name: 'Run playbook-all_nodes-minimal_tmux_configuration.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-minimal_tmux_configuration.yml
