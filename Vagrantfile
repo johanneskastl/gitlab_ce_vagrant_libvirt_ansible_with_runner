@@ -1,6 +1,34 @@
 Vagrant.configure("2") do |config|
 
   ###################################################################################
+  # define number of gitlab runners
+  W = 1
+
+  # provision W VMs as gitlab runners
+  (1..W).each do |i|
+
+    # name the VMs
+    config.vm.define "gitlab-runner0#{i}" do |node|
+
+      # which image to use
+      node.vm.box = "opensuse/Leap-15.4.x86_64"
+
+      # sizing of the VMs
+      node.vm.provider "libvirt" do |lv|
+        lv.random_hostname = true
+        lv.memory = 1024
+        lv.cpus = 2
+      end
+
+      # set the hostname
+      node.vm.hostname = "gitlab-runner#{i}"
+
+    end # config.vm.define gitlab runners
+
+  end # each-loop agents
+
+  ###################################################################################
+
   config.vm.define "gitlab-ce" do |node|
 
     # which image to use
