@@ -1,6 +1,6 @@
 ---
 - name: 'Add the gitlab repository'
-  hosts: 'all'
+  hosts: 'gitlab-ce'
   gather_facts: true
   become: true
 
