@@ -1,6 +1,6 @@
 ---
 - name: 'Simple firewalld configuration'
-  hosts: 'all'
+  hosts: 'gitlab-ce'
   gather_facts: true
   become: true
 
