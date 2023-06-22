@@ -23,14 +23,14 @@
 - name: 'Run playbook-all_nodes-install_hostname.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_hostname.yml
 
-- name: 'Run playbook-all_nodes-fix_dnf_language_error.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-fix_dnf_language_error.yml
+- name: 'Run playbook-gitlab_server-fix_dnf_language_error.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-fix_dnf_language_error.yml
 
-- name: 'Run playbook-all_nodes-simple_firewalld_configuration.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-simple_firewalld_configuration.yml
+- name: 'Run playbook-gitlab_server-simple_firewalld_configuration.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-simple_firewalld_configuration.yml
 
-- name: 'Run playbook-all_nodes-postfix.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-postfix.yml
+- name: 'Run playbook-gitlab_server-postfix.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-postfix.yml
 
-- name: 'Run playbook-all_nodes-jjaswanson4.install_gitlab.yml'
-  ansible.builtin.import_playbook: playbook-all_nodes-jjaswanson4.install_gitlab.yml
+- name: 'Run playbook-gitlab_server-jjaswanson4.install_gitlab.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_server-jjaswanson4.install_gitlab.yml
