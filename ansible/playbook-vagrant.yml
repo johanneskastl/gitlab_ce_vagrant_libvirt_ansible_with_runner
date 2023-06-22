@@ -24,6 +24,10 @@
 - name: 'Run playbook-all_nodes-install_hostname.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_hostname.yml
 
+# gitlab_runners only
+- name: 'Run playbook-gitlab_runners-add_gitlab_repository.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_runners-add_gitlab_repository.yml
+
 - name: 'Run playbook-gitlab_server-copy_gitlab_RPM.yml'
   ansible.builtin.import_playbook: playbook-gitlab_server-copy_gitlab_RPM.yml
 
