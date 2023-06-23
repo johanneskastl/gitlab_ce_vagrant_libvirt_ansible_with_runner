@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "gitlab-runner0#{i}" do |node|
 
       # which image to use
-      node.vm.box = "opensuse/Leap-15.4.x86_64"
+      node.vm.box = "generic/rocky8"
 
       # sizing of the VMs
       node.vm.provider "libvirt" do |lv|
