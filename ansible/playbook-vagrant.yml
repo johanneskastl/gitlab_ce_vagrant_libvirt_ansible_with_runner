@@ -38,3 +38,10 @@
 
 - name: 'Run playbook-gitlab_server-jjaswanson4.install_gitlab.yml'
   ansible.builtin.import_playbook: playbook-gitlab_server-jjaswanson4.install_gitlab.yml
+
+#
+# Gitlab runner VMs only
+#
+
+- name: 'Run playbook-gitlab_runners-add_gitlab_runner_repo_and_install_gitlab_runner.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_runners-add_gitlab_runner_repo_and_install_gitlab_runner.yml
