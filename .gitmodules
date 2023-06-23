@@ -34,3 +34,6 @@
 [submodule "ansible/roles/johanneskastl.simple_firewalld_configuration"]
 	path = ansible/roles/johanneskastl.simple_firewalld_configuration
 	url = https://github.com/johanneskastl/ansible-role-simple_firewalld_configuration
+[submodule "ansible/roles/johanneskastl.add_gitlab_runner_repo_and_install_gitlab_runner"]
+	path = ansible/roles/johanneskastl.add_gitlab_runner_repo_and_install_gitlab_runner
+	url = https://github.com/johanneskastl/ansible-role-add_gitlab_runner_repo_and_install_gitlab_runner
