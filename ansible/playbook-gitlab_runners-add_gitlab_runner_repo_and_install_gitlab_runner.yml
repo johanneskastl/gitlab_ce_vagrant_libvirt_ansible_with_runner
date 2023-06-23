@@ -1,0 +1,8 @@
+---
+- name: 'Add the official gitlab-runner repository and install gitlab-runner'
+  hosts: 'gitlab_runners'
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: 'johanneskastl.add_gitlab_runner_repo_and_install_gitlab_runner'
