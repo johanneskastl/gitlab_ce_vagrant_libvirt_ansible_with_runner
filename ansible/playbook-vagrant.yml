@@ -24,8 +24,8 @@
   ansible.builtin.import_playbook: playbook-all_nodes-install_hostname.yml
 
 # gitlab_runners only
-- name: 'Run playbook-gitlab_runners-add_gitlab_repository.yml'
-  ansible.builtin.import_playbook: playbook-gitlab_runners-add_gitlab_repository.yml
+- name: 'Run playbook-gitlab_runners-add_ojkastl_buildservice_gitlab-runners_repository.yml'
+  ansible.builtin.import_playbook: playbook-gitlab_runners-add_ojkastl_buildservice_gitlab-runners_repository.yml
 
 # gitlab_runners only
 - name: 'Run playbook-gitlab_runners-install_gitlab-runner.yml'
