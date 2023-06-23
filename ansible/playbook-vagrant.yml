@@ -23,6 +23,10 @@
 - name: 'Run playbook-all_nodes-install_hostname.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_hostname.yml
 
+#
+# Gitlab server VM only
+#
+
 - name: 'Run playbook-gitlab_server-fix_dnf_language_error.yml'
   ansible.builtin.import_playbook: playbook-gitlab_server-fix_dnf_language_error.yml
 
